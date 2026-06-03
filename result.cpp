@@ -72,3 +72,44 @@ void displayResult()
     cout << "\nGrade     : " << grade;
     cout << "\n====================================\n";
 }
+int main()
+{
+    int choice;
+
+    do
+    {
+        cout << "\n===== STUDENT RESULT MANAGEMENT SYSTEM =====";
+        cout << "\n1. Enter Student Data";
+        cout << "\n2. Calculate Result";
+        cout << "\n3. Display Result";
+        cout << "\n4. Exit";
+        cout << "\nEnter Choice: ";
+        cin >> choice;
+
+        switch(choice)
+        {
+            case 1:
+                inputData();
+                break;
+
+            case 2:
+                calculateResult();
+                cout << "\nResult Calculated Successfully!\n";
+                break;
+
+            case 3:
+                displayResult();
+                break;
+
+            case 4:
+                cout << "\nProgram Closed.\n";
+                break;
+
+            default:
+                cout << "\nInvalid Choice!\n";
+        }
+
+    } while(choice != 4);
+
+    return 0;
+}
