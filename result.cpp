@@ -7,3 +7,68 @@
        DEPARTMENT   : BSC
     
 */
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string name;
+float maths, physics, cpp, english;
+float total, average;
+char grade;
+
+void inputData()
+{
+    cout << "\nEnter Student Name: ";
+    cin.ignore();
+    getline(cin, name);
+
+    cout << "Enter Maths Marks: ";
+    cin >> maths;
+
+    cout << "Enter Physics Marks: ";
+    cin >> physics;
+
+    cout << "Enter C++ Marks: ";
+    cin >> cpp;
+
+    cout << "Enter English Marks: ";
+    cin >> english;
+}
+
+void calculateResult()
+{
+    total = maths + physics + cpp + english;
+    average = total / 4;
+
+    if (average >= 90)
+        grade = 'A';
+    else if (average >= 80)
+        grade = 'B';
+    else if (average >= 70)
+        grade = 'C';
+    else if (average >= 60)
+        grade = 'D';
+    else
+        grade = 'F';
+}
+
+void displayResult()
+{
+    cout << "\n====================================";
+    cout << "\n      STUDENT RESULT REPORT";
+    cout << "\n====================================";
+
+    cout << "\nName      : " << name;
+    cout << "\nMaths     : " << maths;
+    cout << "\nPhysics   : " << physics;
+    cout << "\nC++       : " << cpp;
+    cout << "\nEnglish   : " << english;
+
+    cout << "\n------------------------------------";
+    cout << "\nTotal     : " << total;
+    cout << "\nAverage   : " << average;
+    cout << "\nGrade     : " << grade;
+    cout << "\n====================================\n";
+}
